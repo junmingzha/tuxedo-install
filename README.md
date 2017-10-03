@@ -4,7 +4,7 @@
 
 1. Build an EL7 host
 
-[wmcdonal@wmcdonal-x1 ~]$ ansible-playbook ansible/laptop-lab/plays/setup_vms.yml 
+`[wmcdonal@wmcdonal-x1 ~]$ ansible-playbook ansible/laptop-lab/plays/setup_vms.yml`
 
 2. Install pre-reqs
 
@@ -12,8 +12,10 @@
 
 3. Create a user
 
-```[root@server ~]# useradd tuxedo
-[root@server ~]# passwd tuxedo```
+```
+[root@server ~]# useradd tuxedo
+[root@server ~]# passwd tuxedo
+```
 
 `[wmcdonal@wmcdonal-x1 ~]$ ssh-copy-id tuxedo@server`
 
@@ -27,13 +29,15 @@
 
 5. Create Oracle inventory 
 
-```[root@server ~]# cat > /etc/oraInst.loc <<EOF
+```
+[root@server ~]# cat > /etc/oraInst.loc <<EOF
 inventory_loc=/home/tuxedo/oraInventory
 inst_group=
 EOF
 
 chown tuxedo:tuxedo /etc/oraInst.loc
-chmod 664 /etc/oraInst.loc```
+chmod 664 /etc/oraInst.loc
+```
 
 6. Create the response file
 
