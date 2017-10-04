@@ -62,7 +62,7 @@ chmod 664 /etc/oraInst.loc
 [tuxedo@server ~]$ export JAVA_HOME=/usr/lib/jvm/jre
 ```
 
-7. Execute the OUI
+8. Execute the OUI
 
 ```
 [tuxedo@server ~]$ ./Disk1/install/runInstaller.sh -responseFile ~/installer.properties -silent -waitforcompletion
@@ -70,5 +70,5 @@ chmod 664 /etc/oraInst.loc
 
 **Note:** the following step does not appear to be necessary when running with the minimal response file. Some additional options in the installer.properties may require root.sh but this minimal install does not currently.
 
-8. Run the root.sh to register to the host's  central OUI registry
+9. Run the root.sh to register to the host's  central OUI registry
 
