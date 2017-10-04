@@ -4,7 +4,9 @@
 
 1. Build an EL7 host
 
-`[wmcdonal@wmcdonal-x1 ~]$ ansible-playbook ansible/laptop-lab/plays/setup_vms.yml`
+```
+[wmcdonal@management ~]$ ansible-playbook ansible/laptop-lab/plays/setup_vms.yml
+```
 
 2. Install pre-reqs
 
@@ -65,6 +67,8 @@ chmod 664 /etc/oraInst.loc
 ```
 [tuxedo@server ~]$ ./Disk1/install/runInstaller.sh -responseFile ~/installer.properties -silent -waitforcompletion
 ```
+
+**Note:** the following step does not appear to be necessary when running with the minimal response file. Some additional options in the installer.properties may require root.sh but this minimal install does not currently.
 
 8. Run the root.sh to register to the host's  central OUI registry
 
